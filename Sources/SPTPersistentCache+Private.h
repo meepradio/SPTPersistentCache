@@ -40,7 +40,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong, readonly) NSOperationQueue *workQueue;
 
 @property (nonatomic, strong, readonly) NSFileManager *fileManager;
-@property (nonatomic, strong, readonly) SPTPersistentCacheFileManager *dataCacheFileManager;
 
 @property (nonatomic, strong, readonly) SPTPersistentCacheGarbageCollector *garbageCollector;
 

@@ -36,11 +36,13 @@ FOUNDATION_EXPORT const unsigned char SPTDataLoaderVersionString[];
 #import <SPTPersistentCache/SPTPersistentCacheHeader.h>
 #import <SPTPersistentCache/SPTPersistentCacheRecord.h>
 #import <SPTPersistentCache/SPTPersistentCacheResponse.h>
+@class SPTPersistentCacheFileManager;
 #else
 #import "SPTPersistentCacheOptions.h"
 #import "SPTPersistentCacheHeader.h"
 #import "SPTPersistentCacheRecord.h"
 #import "SPTPersistentCacheResponse.h"
+#import "SPTPersistentCacheFileManager.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN
@@ -120,6 +122,8 @@ typedef NSString * _Nonnull(^SPTPersistentCacheChooseKeyCallback)(NSArray<NSStri
  * calculation.
  */
 @interface SPTPersistentCache : NSObject
+
+@property (nonatomic, strong, readonly) SPTPersistentCacheFileManager *dataCacheFileManager;
 
 /**
  * Designated initialiser.

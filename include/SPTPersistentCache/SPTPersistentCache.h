@@ -31,10 +31,17 @@ FOUNDATION_EXPORT double SPTDataLoaderVersionNumber;
 FOUNDATION_EXPORT const unsigned char SPTDataLoaderVersionString[];
 #endif // SPT_BUILDING_FRAMEWORK
 
+#ifndef SPT_MANUAL_INCLUDE
 #import <SPTPersistentCache/SPTPersistentCacheOptions.h>
 #import <SPTPersistentCache/SPTPersistentCacheHeader.h>
 #import <SPTPersistentCache/SPTPersistentCacheRecord.h>
 #import <SPTPersistentCache/SPTPersistentCacheResponse.h>
+#else
+#import "SPTPersistentCacheOptions.h"
+#import "SPTPersistentCacheHeader.h"
+#import "SPTPersistentCacheRecord.h"
+#import "SPTPersistentCacheResponse.h"
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
